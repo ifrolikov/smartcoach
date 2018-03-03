@@ -25,6 +25,8 @@ $dataProvider->prepare(true);
                 <div class="media-body">
                     <h4 class="media-heading"><?= $model->title ?></h4>
                     <?= $model->description ?>
+                    <br />
+                    <p><i><?= date('d.m.Y',strtotime($model->created_at)) ?></i></p>
                 </div>
             </div>
             <?php
