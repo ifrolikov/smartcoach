@@ -74,13 +74,14 @@
     background: transparent url("../images/blog-bg.jpg") no-repeat center;
     background-size: cover;
     margin: 10px 0;
-    width: 1170px;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
 
 .like-a-blog .bg.reviews {
     background: transparent url("../images/blog-bg-reviews.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
