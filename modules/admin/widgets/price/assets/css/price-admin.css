@@ -1,0 +1,14 @@
+div.price .price-name, div.price .price-value, div.price .price-description {
+    width: 300px;
+}
+
+div.price .price-description {
+    height: 200px;
+}
+
+div.price {
+    display: inline-block;
+    padding: 5px;
+    background: rgba(0,0,0,.1);
+    margin-right: 10px;
+}
