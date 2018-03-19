@@ -29,6 +29,9 @@ class DefaultController extends Controller
         $builder = Instance::of(ConfigBuilder::class)->get();
 
         $data = \Yii::$app->getRequest()->post('Config');
+        if (!isset($data['prices'])) {
+            $data['prices'] = [];
+        }
         $config = $builder->setData($data)->build();
         $config->save();
         $this->redirect('/admin');
