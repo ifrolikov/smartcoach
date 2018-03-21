@@ -35,6 +35,10 @@ abstract class AbstractConfig extends Model
      * @var string
      */
     public $description;
+    /**
+     * @var string
+     */
+    public $howWork;
 
     /**
      * @var AbstractBlock[]
@@ -44,7 +48,7 @@ abstract class AbstractConfig extends Model
     public function rules()
     {
         return [
-            [['project', 'header', 'announcement', 'phone', 'description'], 'string'],
+            [['project', 'header', 'announcement', 'phone', 'description','howWork'], 'string'],
             [['project', 'header', 'announcement', 'address', 'prices', 'blocks'], 'required']
         ];
     }
