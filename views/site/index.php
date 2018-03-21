@@ -23,12 +23,13 @@ $this->title = ConfigFacade::getProjectName();
             <?= ConfigFacade::getDescription() ?>
         </div>
     </div>
+    <?php if ($prices = ConfigFacade::getPrices()) { ?>
     <div class="body-block body-block-price">
         <div class="container">
             <a name="tseny"></a>
             <h2>Цены</h2>
             <div class="center-block" style="text-align: center;">
-                <?php foreach (ConfigFacade::getPrices() as $price) { ?>
+                <?php foreach ($prices as $price) { ?>
                     <div class="center-block text-center price-item">
                         <div class="panel panel-pricing animate">
                             <div class="panel-heading">
@@ -54,6 +55,7 @@ $this->title = ConfigFacade::getProjectName();
             </div>
         </div>
     </div>
+    <?php } ?>
     <div class="body-block">
         <a name="kontakty"></a>
         <div class="container">
