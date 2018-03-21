@@ -5,16 +5,69 @@
 use app\facades\ConfigFacade;
 
 $this->title = ConfigFacade::getProjectName();
+$blocks = ConfigFacade::getBlocks();
 \app\assets\MainPageAsset::register($this);
+\app\assets\SmartcoachAsset::register($this);
 ?>
+<style>
+    <?php if ($blocks[0]['image']) { ?>
+    body > .wrap > div.body > div:nth-child(1) {
+        background-image: url('<?= $blocks[0]['image'] ?>') !important;
+    }
+    <?php } ?>
+    <?php if ($blocks[1]['image']) { ?>
+    body > .wrap > div.body > div:nth-child(2) {
+        background-image: url('<?= $blocks[1]['image'] ?>') !important;
+    }
+    <?php } ?>
+</style>
 
-<div class="jumbotron main-picture">
-    <div class="container">
-        <h1><?= ConfigFacade::getHeader() ?></h1>
-        <?= ConfigFacade::getAnnouncement() ?>
-        <p><a href="tel:<?= ConfigFacade::getPhone() ?>" class="btn btn-danger"><i
-                        class="glyphicon glyphicon-phone"></i> Позвонить</a></p>
+
+<div class="popup" id="popup1">
+    <a class="close animate-fast" href="#">&times;</a>
+    <img src="<?= $blocks[0]->image ?>" />
+    <div class="content">
+        <div class="title"><?= $blocks[0]->title ?></div>
+        <div class="description"><?= $blocks[0]->description ?></div>
+        <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в Instagram</a>
+        <br />
+        <a class="btn btn-danger" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
     </div>
+</div>
+<div class="popup" id="popup2">
+    <a class="close animate-fast" href="#">&times;</a>
+    <img src="<?= $blocks[1]->image ?>" />
+    <div class="content">
+        <div class="title"><?= $blocks[0]->title ?></div>
+        <div class="description"><?= $blocks[0]->description ?></div>
+        <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в Instagram</a>
+        <br />
+        <a class="btn btn-danger" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
+    </div>
+</div>
+<!--<div class="jumbotron main-picture body">-->
+<!--    <div class="container">-->
+<!--        <h1>--><?//= ConfigFacade::getHeader() ?><!--</h1>-->
+<!--        --><?//= ConfigFacade::getAnnouncement() ?>
+<!--        <p><a href="tel:--><?//= ConfigFacade::getPhone() ?><!--" class="btn btn-danger"><i-->
+<!--                        class="glyphicon glyphicon-phone"></i> Позвонить</a></p>-->
+<!--    </div>-->
+<!--</div>-->
+<div class="body">
+    <div class="part animate">
+        <div class="content animate-fast">
+            <div class="title animate-fast"><?= $blocks[0]->title ?></div>
+            <div class="description animate-fast"><?= $blocks[0]->announcement ?></div>
+            <a href="#" class="animate-fast _popup-link btn btn-danger" data-popup="popup1">Подробнее</a>
+        </div>
+    </div>
+    <div class="part animate">
+        <div class="content animate-fast">
+            <div class="title animate-fast"><?= $blocks[1]->title ?></div>
+            <div class="description animate-fast"><?= $blocks[1]->announcement ?></div>
+            <a href="#" class="animate-fast _popup-link btn btn-danger" data-popup="popup2">Подробнее</a>
+        </div></div>
+    <div class="clear"></div>
 </div>
 <div class="body-blocks">
     <div class="body-block">
