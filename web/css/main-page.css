@@ -115,7 +115,7 @@ body > .wrap > .body > .part:hover > .content {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#4dffffff',GradientType=0 ); /* IE6-9 */
 }
 body > .wrap > .body > .part > .content > .title { font-size: 40px; margin-bottom: 30px; color: #fff; }
-body > .wrap > .body > .part > .content > .description { font-size: 20px; color: rgba(0,0,0,.8); margin: 0px 60px;  margin-bottom: 30px; font-weight: lighter;
+body > .wrap > .body > .part > .content > .description { font-size: 16px; color: rgba(0,0,0,.8); margin: 0px 10px;  margin-bottom: 30px; font-weight: lighter;
     text-align: center; padding: 5px; background: rgba(255,255,255,.5);
 }
 /*body > .wrap > .body > .part > .content > a { display: inline-block; text-align: center; font-size: 16px; padding: 10px 30px;*/
