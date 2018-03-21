@@ -32,6 +32,9 @@ class Config extends AbstractConfig implements ConfigModelInterface
         if (is_array($data['prices'])) {
             $data['prices'] = json_encode($data['prices'], JSON_UNESCAPED_UNICODE);
         }
+        if (is_array($data['blocks'])) {
+            $data['blocks'] = json_encode($data['blocks'], JSON_UNESCAPED_UNICODE);
+        }
         file_put_contents($this->getSourcePath(), json_encode($this->toArray(), JSON_UNESCAPED_UNICODE));
         return $this;
     }
