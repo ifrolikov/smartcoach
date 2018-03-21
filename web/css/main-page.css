@@ -105,7 +105,7 @@ body > .wrap > .body > .part:nth-child(1) { background: transparent url('../imag
 body > .wrap > .body > .part:nth-child(2) { background: transparent url('../images/pilates.jpg') center center no-repeat; }
 
 body > .wrap > .body > .part > .content { width: 100%; height: 100%; text-align: center; vertical-align: top;
-    position: relative; opacity: .8; -moz-opacity: .8; padding: 10px 0 }
+    position: relative; opacity: .8; -moz-opacity: .8; padding: 0 0 50px 0 }
 body > .wrap > .body > .part:hover > .content { opacity: 1; -moz-opacity: 1; }
 body > .wrap > .body > .part:hover > .content {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,ffffff+100&0.3+0,0.3+100 */
