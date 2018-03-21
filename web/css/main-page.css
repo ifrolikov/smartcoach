@@ -114,7 +114,7 @@ body > .wrap > .body > .part:hover > .content {
     background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(255,255,255,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#4dffffff',GradientType=0 ); /* IE6-9 */
 }
-body > .wrap > .body > .part > .content > .title { font-size: 160%; margin-bottom: 30px; color: #fff; padding: 10px; rgba(0,0,0,.9); }
+body > .wrap > .body > .part > .content > .title { font-size: 160%; margin-bottom: 30px; color: #fff; padding: 10px; background: rgba(0,0,0,.9); }
 body > .wrap > .body > .part > .content > .description { font-size: 100%; color: rgba(0,0,0,.8); margin-bottom: 30px; font-weight: lighter;
     text-align: center; padding: 15px; background: rgba(255,255,255,.9);
 }
