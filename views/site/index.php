@@ -76,6 +76,14 @@ $blocks = ConfigFacade::getBlocks();
             <?= ConfigFacade::getDescription() ?>
         </div>
     </div>
+    <?php if ($data = ConfigFacade::getHowWork()) { ?>
+    <div class="body-block">
+        <div class="container">
+            <h2>Как я работаю</h2>
+            <?= $data ?>
+        </div>
+    </div>
+    <?php } ?>
     <?php if ($prices = ConfigFacade::getPrices()) { ?>
     <div class="body-block body-block-price">
         <div class="container">
