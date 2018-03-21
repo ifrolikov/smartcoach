@@ -125,7 +125,7 @@ body > .wrap > .body > .part > .content > div { position: relative; top: +20%; }
 body > .wrap > .body > .part:hover > .content > div { top: 0; }
 body > .wrap > .body > .part > .content > .btn { font-size: 22px; }
 
-.popup { width: 500px; display: none; }
+.popup { max-width: 500px; display: none; }
 .popup img { width: 100%; margin: 0px; padding: 0px; display: block; }
 .popup > .content { background: #fff; color: #000; text-align: center; padding: 30px 0px; }
 .popup > .content > div { margin: 20px 0px; display: inline-block; width: 400px; padding: 0 50px; }
