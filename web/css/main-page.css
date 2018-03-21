@@ -142,3 +142,4 @@ body > .wrap > .body > .part > .content > .btn { font-size: 22px; }
 .close:hover { color: #aaa; }
 
 .btn-danger {  background-color: rgba(0,50,122,1) !important; border-color: rgba(0,50,122,1) !important; }
+.clear { clear: both; }
