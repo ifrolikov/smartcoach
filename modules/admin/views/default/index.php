@@ -17,16 +17,16 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'project')->textInput(['maxlength' => true])->label('Проект') ?>
     <?= $form->field($model, 'description')->widget(\dosamigos\ckeditor\CKEditor::class,
         [
-            'preset' => 'basic',
+            'preset' => 'standard',
             'clientOptions' => [
                 'filebrowserUploadUrl' => '/admin/upload'
             ]
         ])->label('Обо мне') ?>
     <?= $form->field($model, 'howWork')->widget(\dosamigos\ckeditor\CKEditor::class,
         [
-            'preset' => 'basic',
+            'preset' => 'standard',
             'clientOptions' => [
-                'filebrowserUploadUrl' => '/admin/upload'
+                'filebrowserUploadUrl' => '/admin/upload',
             ]
         ])->label('Как я работаю') ?>
     <?= $form->field($model, 'phone')->textInput(['maxlength' => true])->label('Телефон') ?>
