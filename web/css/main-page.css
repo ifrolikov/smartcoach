@@ -149,6 +149,6 @@ body > .wrap > .body > .part > .content > .btn { font-size: 18px; margin-top: 25
 .btn-danger {  background-color: rgba(0,50,122,1) !important; border-color: rgba(0,50,122,1) !important; }
 .clear { clear: both; }
 
-.social > a { margin: 5px 0px; display: inline-block; width: 64px; height: 64px; }
+.social > a { margin: 0px; display: inline-block; width: 64px; height: 64px; }
 .social > a.instagram { background: transparent url(../images/instagram.png) 0 0 no-repeat; }
 .social > a.facebook { background: transparent url(../images/facebook.png) 0 0 no-repeat; }
