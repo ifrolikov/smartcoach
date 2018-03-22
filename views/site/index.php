@@ -126,6 +126,10 @@ $blocks = ConfigFacade::getBlocks();
             <p><b>Телефон:</b> <span><?= ConfigFacade::getPhone() ?></span> <a
                         href="tel:<?= ConfigFacade::getPhone() ?>"><i
                             class="glyphicon glyphicon-phone"></i></a></p>
+            <div class="social">
+                <a class="facebook" href="https://www.facebook.com/kirill.shupinskiy?fref=ts" target="_blank" rel="nofollow"><i></i></a>
+                <a class="instagram" href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow"><i></i></a>
+            </div>
         </div>
         <br/>
         <script type="text/javascript" charset="utf-8" async
