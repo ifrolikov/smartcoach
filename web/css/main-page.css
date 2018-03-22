@@ -121,7 +121,7 @@ body > .wrap > .body > .part:hover > .content {
 }
 body > .wrap > .body > .part > .content > .title { font-size: 200%; margin-bottom: 30px; color: #fff; padding: 10px; background: rgba(0,0,0,.5); }
 body > .wrap > .body > .part > .content > .description { font-size: 120%; color: rgba(255,255,255,.9); margin-bottom: 30px; font-weight: lighter;
-    text-align: center; padding: 15px;
+    text-align: center; padding: 15px; background-color: rgba(0,0,0,.5);
 }
 /*body > .wrap > .body > .part > .content > a { display: inline-block; text-align: center; font-size: 16px; padding: 10px 30px;*/
     /*border-radius: 20px; background: #fff; color: #000; height: 20px; }*/
