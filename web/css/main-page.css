@@ -137,7 +137,7 @@ body > .wrap > .body > .part > .content > .btn { font-size: 18px; margin-top: 25
 .popup > .content > .description { font-size: 16px; }
 .popup > .content > a { display: inline-block; height: 50px; padding: 10px 30px; border-radius: 7px; background: transparent;
     border: 2px #000 solid; text-align: center; font-size: 16px; line-height: 30px; color: rgba(0,0,0,1); text-decoration: none;
-    margin-bottom: 10px; }
+    margin-bottom: 20px; }
 .popup > .content > a.btn { color: rgba(255,255,255,1) }
 
 
