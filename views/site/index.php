@@ -24,7 +24,6 @@ $blocks = ConfigFacade::getBlocks();
 
 
 <div class="popup" id="popup1">
-    <a class="close animate-fast" href="#">&times;</a>
     <img src="<?= $blocks[0]->image ?>" />
     <div class="content">
         <div class="title"><?= $blocks[0]->title ?></div>
@@ -33,9 +32,9 @@ $blocks = ConfigFacade::getBlocks();
         <br />
         <a class="btn btn-danger" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
     </div>
+    <a class="close animate-fast" href="#">&times;</a>
 </div>
 <div class="popup" id="popup2">
-    <a class="close animate-fast" href="#">&times;</a>
     <img src="<?= $blocks[1]->image ?>" />
     <div class="content">
         <div class="title"><?= $blocks[0]->title ?></div>
@@ -44,6 +43,7 @@ $blocks = ConfigFacade::getBlocks();
         <br />
         <a class="btn btn-danger" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
     </div>
+    <a class="close animate-fast" href="#">&times;</a>
 </div>
 <!--<div class="jumbotron main-picture body">-->
 <!--    <div class="container">-->
