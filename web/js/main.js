@@ -12,6 +12,7 @@ $(document).ready(function(){
             detach: true
         });
         $object.popup('show');
+        $('#'+$(this).data('popup')+'_wrapper').click($object.popup('hide'));
     });
     $('.close').click(function(e){
         e.preventDefault();
