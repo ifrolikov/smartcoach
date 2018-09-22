@@ -31,6 +31,9 @@ $blocks = ConfigFacade::getBlocks();
         <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в Instagram</a>
         <br />
         <a class="btn btn-danger" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
+		<a class="btn" href="whatsapp://call?number=<?=preg_replace('~[^\d]+~', '', ConfigFacade::getPhone())?>">
+			<img src="/images/whatsup.png" />
+		</a>
     </div>
     <a class="close animate-fast" href="#">&times;</a>
 </div>
@@ -42,6 +45,9 @@ $blocks = ConfigFacade::getBlocks();
         <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в Instagram</a>
         <br />
         <a class="btn btn-danger" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
+		<a class="btn" href="whatsapp://call?number=<?=preg_replace('~[^\d]+~', '', ConfigFacade::getPhone())?>">
+			<img src="/images/whatsup.png" />
+		</a>
     </div>
     <a class="close animate-fast" href="#">&times;</a>
 </div>
