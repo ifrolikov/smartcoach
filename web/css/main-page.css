@@ -131,7 +131,7 @@ body > .wrap > .body > .part > .content > div { position: relative; top: +5%; }
 body > .wrap > .body > .part > .content > .btn { font-size: 18px; margin-top: 25px; }
 
 .popup { max-width: 500px; display: none; background: #fff; overflow: hidden; }
-.popup img { width: 100%; margin: 0px; padding: 0px; display: block; position: absolute; top: 0px; left: 0px; opacity: .2; }
+.popup > img { width: 100%; margin: 0px; padding: 0px; display: block; position: absolute; top: 0px; left: 0px; opacity: .2; }
 .popup > .content { background: transparent; color: #000; text-align: center; padding: 30px 0px; position: relative; }
 .popup > .content > div { margin: 20px 0px; display: inline-block; width: 400px; padding: 0 50px; }
 .popup > .content > .title { font-size: 30px; font-weight: bold }
@@ -140,6 +140,7 @@ body > .wrap > .body > .part > .content > .btn { font-size: 18px; margin-top: 25
     border: 2px #000 solid; text-align: center; font-size: 16px; line-height: 30px; color: rgba(0,0,0,1); text-decoration: none;
     margin-bottom: 20px; }
 .popup > .content > a.btn { color: rgba(255,255,255,1) }
+.popup a.whatsup { border-color: transparent; padding: 0px; }
 
 
 .close { font-size: 60px; color: #fff; position: absolute; top: 5px; right: 5px; display: inline-block;
