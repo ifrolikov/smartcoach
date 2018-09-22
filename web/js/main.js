@@ -13,7 +13,6 @@ $(document).ready(function(){
         });
         $object.popup('show');
         $('#'+$(this).data('popup')+'_wrapper').click(function(){
-            console.log($object.length);
             $object.popup('hide')
         });
     });
