@@ -3,6 +3,7 @@
 namespace app\facades;
 
 use app\builders\ConfigBuilder;
+use app\factories\AbstractBlock;
 use app\factories\AbstractPrice;
 use yii\di\Instance;
 
@@ -34,6 +35,14 @@ final class ConfigFacade
     }
 
     /**
+     * @return string
+     */
+    public static function getHowWork()
+    {
+        return self::getBuilder()->build()->howWork;
+    }
+
+    /**
      * @return AbstractPrice[]
      */
     public static function getPrices(): array
@@ -44,6 +53,14 @@ final class ConfigFacade
     public static function getDescription(): string
     {
         return self::getBuilder()->build()->description;
+    }
+
+    /**
+     * @return AbstractBlock[]
+     */
+    public static function getBlocks(): array
+    {
+        return self::getBuilder()->build()->blocks;
     }
 
     /**

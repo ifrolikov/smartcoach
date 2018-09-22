@@ -34,14 +34,19 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
+
+    $items = [];
+    if (ConfigFacade::getPrices()) {
+        $items[] = ['label' => 'Цены', 'url' => ['/#tseny']];
+    }
+    $items = array_merge($items, [
+        ['label' => 'Контакты', 'url' => ['/#kontakty']],
+        ['label' => 'Блог', 'url' => ['/blog']],
+        ['label' => 'Отзывы', 'url' => ['/otzyvy']]
+    ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Цены', 'url' => ['/#tseny']],
-            ['label' => 'Контакты', 'url' => ['/#kontakty']],
-            ['label' => 'Блог', 'url' => ['/blog']],
-            ['label' => 'Отзывы', 'url' => ['/otzyvy']]
-        ],
+        'items' => $items
     ]);
     NavBar::end();
     ?>

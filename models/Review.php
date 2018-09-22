@@ -31,7 +31,7 @@ class Review extends \yii\db\ActiveRecord
     {
         return [
             [['created_at'], 'safe'],
-            [['title', 'description'], 'required'],
+            [['title', 'description', 'created_at'], 'required'],
             [['description'], 'string'],
             [['is_active'], 'integer'],
             [['title'], 'string', 'max' => 255],
