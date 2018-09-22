@@ -30,8 +30,8 @@ $blocks = ConfigFacade::getBlocks();
         <div class="description"><?= $blocks[0]->description ?></div>
         <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в Instagram</a>
         <br />
-        <a class="btn btn-danger" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
-		<a class="btn whatsup" href="https://wa.me/<?=preg_replace('~[^\d]+~', '', ConfigFacade::getPhone())?>">
+        <a class="btn btn-danger" target="_blank" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
+		<a class="btn whatsup" target="_blank" href="https://wa.me/<?=preg_replace('~[^\d]+~', '', ConfigFacade::getPhone())?>">
 			<img src="/images/whatsup.png" />
 		</a>
     </div>
@@ -44,8 +44,8 @@ $blocks = ConfigFacade::getBlocks();
         <div class="description"><?= $blocks[0]->description ?></div>
         <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в Instagram</a>
         <br />
-        <a class="btn btn-danger" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
-		<a class="btn whatsup" href="https://wa.me/<?=preg_replace('~[^\d]+~', '', ConfigFacade::getPhone())?>">
+        <a class="btn btn-danger" target="_blank" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
+		<a class="btn whatsup" target="_blank" href="https://wa.me/<?=preg_replace('~[^\d]+~', '', ConfigFacade::getPhone())?>">
 			<img src="/images/whatsup.png" />
 		</a>
     </div>
