@@ -12,9 +12,10 @@ $(document).ready(function(){
             detach: true
         });
         $object.popup('show');
-        console.log('#'+$(this).data('popup')+'_wrapper');
-        console.log($('#'+$(this).data('popup')+'_wrapper').length);
-        $('#'+$(this).data('popup')+'_wrapper').click($object.popup('hide'));
+        $('#'+$(this).data('popup')+'_wrapper').click(function(){
+            console.log($object.length);
+            $object.popup('hide')
+        });
     });
     $('.close').click(function(e){
         e.preventDefault();
