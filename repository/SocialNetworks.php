@@ -10,7 +10,7 @@ use ifrolikov\dto\JsonDtoPacker;
 
 class SocialNetworks
 {
-    const CONFIG_FILE = __DIR__ . '/../_data/socialNetworks.json';
+    const CONFIG_FILE = __DIR__ . '/../_data/social.json';
 
     /**
      * @var JsonDtoPacker
