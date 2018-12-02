@@ -3,7 +3,9 @@ declare(strict_types=1);
 
 namespace app\models\social;
 
-final class Instagram
+use yii\base\Model;
+
+final class Instagram extends Model
 {
     /**
      * @var string
@@ -23,6 +25,7 @@ final class Instagram
         $this->appId = $appId;
         $this->user = $user;
         $this->password = $password;
+        parent::__construct([]);
     }
 
     /**
