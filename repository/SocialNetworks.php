@@ -10,7 +10,7 @@ use ifrolikov\dto\JsonDtoPacker;
 
 class SocialNetworks
 {
-    private const CONFIG_FILE = __DIR__ . '/../_data/socialNetworks.json';
+    const CONFIG_FILE = __DIR__ . '/../_data/socialNetworks.json';
 
     /**
      * @var JsonDtoPacker
@@ -42,12 +42,17 @@ class SocialNetworks
      * @param Base $baseConfig
      * @throws \ReflectionException
      */
-    public function save(Base $baseConfig): void
+    public function save(Base $baseConfig)
     {
         file_put_contents(self::CONFIG_FILE, $this->jsonPacker->pack($baseConfig));
     }
 
-    private function initSource(): void
+    public function getBase(): Base
+    {
+        return $this->source ?? new Base();
+    }
+
+    private function initSource()
     {
         if (!file_exists(self::CONFIG_FILE)) {
             return;
@@ -64,10 +69,5 @@ class SocialNetworks
         }
 
         $this->source = $this->dtoBuilder->setData($json)->build(Base::class);
-    }
-
-    public function getBase(): Base
-    {
-        return $this->source ?? new Base();
     }
 }
