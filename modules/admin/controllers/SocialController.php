@@ -9,7 +9,7 @@ use ifrolikov\dto\Interfaces\DtoBuilderInterface;
 use yii\base\Module;
 use yii\web\Controller;
 
-class Social extends Controller
+class SocialController extends Controller
 {
     /** @var SocialNetworksRepository */
     private $socialNetworksRepository;
