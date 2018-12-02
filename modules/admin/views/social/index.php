@@ -1,8 +1,5 @@
 <?php
 
-use app\modules\admin\widgets\price\PriceWidget;
-use app\modules\admin\widgets\block\BlockWidget;
-use dosamigos\ckeditor\CKEditor;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
