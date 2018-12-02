@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
     <h2>Instagram</h2>
     <?= $form->field($config, 'instagram[appId]')->textInput(['maxlength' => true])->label('Client ID') ?>
     <?= $form->field($config, 'instagram[user]')->textInput(['maxlength' => true])->label('User') ?>
-    <?= $form->field($config, 'instagram[password]')->textInput(['maxlength' => true])->label('Password') ?>
+    <?= $form->field($config, 'instagram[password]')->passwordInput(['maxlength' => true])->label('Password') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
