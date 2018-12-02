@@ -46,7 +46,7 @@ class SocialController extends Controller
      */
     public function actionCreate(): string
     {
-        $post = \Yii::$app->getRequest()->post();
+        $post = \Yii::$app->getRequest()->post('Base');
         var_dump($post); exit;
         /** @var DtoBuilderInterface $dtoBuilder */
         $dtoBuilder = \Yii::$container->get(DtoBuilderInterface::class);
