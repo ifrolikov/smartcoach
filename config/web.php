@@ -50,7 +50,9 @@ $config = [
             'showScriptName' => false,
             'rules' => [
                 'POST admin/upload' => 'admin/upload/create',
-                'POST admin' => 'admin/default/create'
+                'POST admin' => 'admin/default/create',
+                'POST admin/social' => 'admin/social/create',
+                'GET admin/social' => 'admin/social/index'
             ],
         ],
     ],

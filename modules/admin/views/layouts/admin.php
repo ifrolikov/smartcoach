@@ -40,7 +40,7 @@ AppAsset::register($this);
             ['label' => 'Главная', 'url' => ['/admin']],
             ['label' => 'Блог', 'url' => ['/admin/blog']],
             ['label' => 'Отзывы', 'url' => ['/admin/review']],
-            ['label' => 'Соц. сети', 'url' => ['/admin/social-networks']]
+            ['label' => 'Соц. сети', 'url' => ['/admin/social']]
         ],
     ]);
     NavBar::end();
