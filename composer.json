@@ -12,15 +12,17 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.4.0",
+        "php": ">=7.1",
         "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "kartik-v/yii2-widget-datepicker": "^1.4",
         "kartik-v/yii2-editable": "^1.7",
-        "2amigos/yii2-ckeditor-widget": "^2.1"
+        "2amigos/yii2-ckeditor-widget": "^2.1",
+        "ifrolikov/dto": "1.33",
+      "ext-json": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

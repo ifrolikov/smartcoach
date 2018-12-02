@@ -39,7 +39,8 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Главная', 'url' => ['/admin']],
             ['label' => 'Блог', 'url' => ['/admin/blog']],
-            ['label' => 'Отзывы', 'url' => ['/admin/review']]
+            ['label' => 'Отзывы', 'url' => ['/admin/review']],
+            ['label' => 'Соц. сети', 'url' => ['/admin/social-networks']]
         ],
     ]);
     NavBar::end();
