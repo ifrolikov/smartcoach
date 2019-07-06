@@ -14,48 +14,54 @@ $blocks = ConfigFacade::getBlocks();
     body > .wrap > div.body > div:nth-child(1) {
         background-image: url('<?= $blocks[0]['image'] ?>') !important;
     }
+
     <?php } ?>
     <?php if ($blocks[1]['image']) { ?>
     body > .wrap > div.body > div:nth-child(2) {
         background-image: url('<?= $blocks[1]['image'] ?>') !important;
     }
+
     <?php } ?>
 </style>
 
 
 <div class="popup" id="popup1">
-    <img src="<?= $blocks[0]->image ?>" />
+    <img src="<?= $blocks[0]->image ?>"/>
     <div class="content">
         <div class="title"><?= $blocks[0]->title ?></div>
         <div class="description"><?= $blocks[0]->description ?></div>
-        <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в Instagram</a>
-        <br />
-        <a class="btn btn-danger" target="_blank" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
-		<a class="btn whatsup" target="_blank" href="https://wa.me/<?=preg_replace('~[^\d]+~', '', ConfigFacade::getPhone())?>">
-			<img src="/images/whatsup.png" />
-		</a>
+        <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в
+            Instagram</a>
+        <br/>
+        <a class="btn btn-danger" target="_blank" href="tel:<?= ConfigFacade::getPhone() ?>">Позвонить</a>
+        <a class="btn whatsup" target="_blank"
+           href="https://wa.me/<?= preg_replace('~[^\d]+~', '', ConfigFacade::getPhone()) ?>">
+            <img src="/images/whatsup.png"/>
+        </a>
     </div>
     <a class="close animate-fast" href="#">&times;</a>
 </div>
 <div class="popup" id="popup2">
-    <img src="<?= $blocks[1]->image ?>" />
+    <img src="<?= $blocks[1]->image ?>"/>
     <div class="content">
         <div class="title"><?= $blocks[0]->title ?></div>
         <div class="description"><?= $blocks[0]->description ?></div>
-        <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в Instagram</a>
-        <br />
-        <a class="btn btn-danger" target="_blank" href="tel:<?=ConfigFacade::getPhone()?>">Позвонить</a>
-		<a class="btn whatsup" target="_blank" href="https://wa.me/<?=preg_replace('~[^\d]+~', '', ConfigFacade::getPhone())?>">
-			<img src="/images/whatsup.png" />
-		</a>
+        <a href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow">Больше информации в
+            Instagram</a>
+        <br/>
+        <a class="btn btn-danger" target="_blank" href="tel:<?= ConfigFacade::getPhone() ?>">Позвонить</a>
+        <a class="btn whatsup" target="_blank"
+           href="https://wa.me/<?= preg_replace('~[^\d]+~', '', ConfigFacade::getPhone()) ?>">
+            <img src="/images/whatsup.png"/>
+        </a>
     </div>
     <a class="close animate-fast" href="#">&times;</a>
 </div>
 <!--<div class="jumbotron main-picture body">-->
 <!--    <div class="container">-->
-<!--        <h1>--><?//= ConfigFacade::getHeader() ?><!--</h1>-->
-<!--        --><?//= ConfigFacade::getAnnouncement() ?>
-<!--        <p><a href="tel:--><?//= ConfigFacade::getPhone() ?><!--" class="btn btn-danger"><i-->
+<!--        <h1>--><? //= ConfigFacade::getHeader() ?><!--</h1>-->
+<!--        --><? //= ConfigFacade::getAnnouncement() ?>
+<!--        <p><a href="tel:--><? //= ConfigFacade::getPhone() ?><!--" class="btn btn-danger"><i-->
 <!--                        class="glyphicon glyphicon-phone"></i> Позвонить</a></p>-->
 <!--    </div>-->
 <!--</div>-->
@@ -72,18 +78,23 @@ $blocks = ConfigFacade::getBlocks();
             <div class="title animate-fast"><?= $blocks[1]->title ?></div>
             <div class="description animate-fast"><?= $blocks[1]->announcement ?></div>
             <a href="#" class="animate-fast _popup-link btn btn-danger" data-popup="popup2">Подробнее</a>
-        </div></div>
+        </div>
+    </div>
     <div class="clear"></div>
 </div>
 <div class="body-blocks">
     <?php if ($data = ConfigFacade::getHowWork()) { ?>
-    <div class="body-block">
-        <div class="container">
-            <h2>Как я работаю</h2>
-            <?= $data ?>
-            <iframe width="100%" height="360px" src="https://www.youtube.com/embed/MBqpcd1wbPc?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="body-block">
+            <div class="container">
+                <h2>Как я работаю</h2>
+                <?= str_replace(
+                    '[[video]]',
+                    '<iframe width="100%" height="360px" src="https://www.youtube.com/embed/MBqpcd1wbPc?ecver=1" ' .
+                    'frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>',
+                    $data
+                ) ?>
+            </div>
         </div>
-    </div>
     <?php } ?>
     <div class="body-block">
         <div class="container">
@@ -92,45 +103,47 @@ $blocks = ConfigFacade::getBlocks();
         </div>
     </div>
     <?php if ($prices = ConfigFacade::getPrices()) { ?>
-    <div class="body-block body-block-price">
-        <div class="container">
-            <a name="tseny"></a>
-            <h2>Цены</h2>
-            <div class="center-block" style="text-align: center;">
-                <?php foreach ($prices as $price) { ?>
-                    <div class="center-block text-center price-item">
-                        <div class="panel panel-pricing animate">
-                            <div class="panel-heading">
-                                <i class="fa fa-desktop"></i>
-                                <h3><?= $price->name ?></h3>
-                            </div>
-                            <div class="panel-body panel-price text-center">
-                                <p><span class="price"><?= $price->price ?></span><i
-                                            class="glyphicon glyphicon-rub"></i></p>
-                            </div>
-                            <div class="panel-body text-center panel-description">
-                                <?= nl2br($price->description) ?>
-                            </div>
-                            <div class="panel-footer">
-                                <a href="tel:<?= ConfigFacade::getPhone() ?>"
-                                   class="btn btn-lg btn-block btn-danger"><i
-                                            class="glyphicon glyphicon-phone"></i> Позвонить</a>
+        <div class="body-block body-block-price">
+            <div class="container">
+                <a name="tseny"></a>
+                <h2>Цены</h2>
+                <div class="center-block" style="text-align: center;">
+                    <?php foreach ($prices as $price) { ?>
+                        <div class="center-block text-center price-item">
+                            <div class="panel panel-pricing animate">
+                                <div class="panel-heading">
+                                    <i class="fa fa-desktop"></i>
+                                    <h3><?= $price->name ?></h3>
+                                </div>
+                                <div class="panel-body panel-price text-center">
+                                    <p><span class="price"><?= $price->price ?></span><i
+                                                class="glyphicon glyphicon-rub"></i></p>
+                                </div>
+                                <div class="panel-body text-center panel-description">
+                                    <?= nl2br($price->description) ?>
+                                </div>
+                                <div class="panel-footer">
+                                    <a href="tel:<?= ConfigFacade::getPhone() ?>"
+                                       class="btn btn-lg btn-block btn-danger"><i
+                                                class="glyphicon glyphicon-phone"></i> Позвонить</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <?php } ?>
-                <div class="clearfix"></div>
+                    <?php } ?>
+                    <div class="clearfix"></div>
+                </div>
             </div>
         </div>
-    </div>
     <?php } ?>
     <div class="body-block">
         <a name="kontakty"></a>
         <div class="container">
             <h2>Контакты</h2>
             <div class="social pull-right">
-                <a class="facebook" href="https://www.facebook.com/kirill.shupinskiy?fref=ts" target="_blank" rel="nofollow"><i></i></a>
-                <a class="instagram" href="https://www.instagram.com/smartcoach77/" target="_blank" rel="nofollow"><i></i></a>
+                <a class="facebook" href="https://www.facebook.com/kirill.shupinskiy?fref=ts" target="_blank"
+                   rel="nofollow"><i></i></a>
+                <a class="instagram" href="https://www.instagram.com/smartcoach77/" target="_blank"
+                   rel="nofollow"><i></i></a>
             </div>
             <p><b>Адрес:</b> <span><?= ConfigFacade::getAddress() ?></span></p>
             <p><b>Телефон:</b> <span><?= ConfigFacade::getPhone() ?></span> <a
