@@ -80,8 +80,8 @@ $blocks = ConfigFacade::getBlocks();
     <div class="body-block">
         <div class="container">
             <h2>Как я работаю</h2>
-            <iframe width="100%" height="360px" src="https://www.youtube.com/embed/MBqpcd1wbPc?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <?= $data ?>
+            <iframe width="100%" height="360px" src="https://www.youtube.com/embed/MBqpcd1wbPc?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </div>
     <?php } ?>
