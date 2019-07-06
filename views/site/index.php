@@ -86,7 +86,7 @@ $blocks = ConfigFacade::getBlocks();
     <?php if ($data = ConfigFacade::getHowWork()) { ?>
         <div class="body-block">
             <div class="container">
-                <h2>Как я работаю</h2>
+                <h2>Основные направления моей работы</h2>
                 <?= str_replace(
                     '[[video]]',
                     '<iframe width="100%" height="360px" src="https://www.youtube.com/embed/MBqpcd1wbPc?ecver=1" ' .
